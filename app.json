@@ -1,13 +1,52 @@
 {
-  "pages":[
+  "pages": [
+    "pages/demo03/demo03",
+    "pages/demo01/demo01",
     "pages/index/index",
+    "pages/img/img",
+    "pages/mine/mine",
+    "pages/search/search",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "我的应用",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#000000"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/仓储仓库 (1).png",
+        "selectedIconPath": "icon/仓储仓库.png"
+      },
+      {
+        "pagePath": "pages/img/img",
+        "text": "图片",
+        "iconPath": "icon/安全隐私 (1).png",
+        "selectedIconPath": "icon/安全隐私.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icon/公益 (1).png",
+        "selectedIconPath": "icon/公益.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "icon/文档 (1).png",
+        "selectedIconPath": "icon/文档.png"
+      }
+    ],
+    "color": "#0094ff",
+    "selectedColor": "#fff9400",
+    "backgroundColor": "#ff5533",
+    "position": "top"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

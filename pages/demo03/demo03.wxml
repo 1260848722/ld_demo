@@ -1,0 +1,4 @@
+<!--pages/demo03/demo03.wxml-->
+
+
+<view> {{msg}} </view>

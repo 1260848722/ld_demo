@@ -1,0 +1,11 @@
+<button>默认按钮</button>
+<button size="mini">默认按钮</button>
+<button type="primary">默认按钮</button>
+<button type="warn">默认按钮</button>
+<button type="warn" plain>默认按钮</button>
+<button disabled type="warn" plain>默认按钮</button>
+<button loading type="primary">默认按钮</button>
+
+<button open-type="contact">客服</button>
+<button open-type="share">转发</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> 

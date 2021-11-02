@@ -2,3 +2,48 @@
 
 
 <view> {{msg}} </view>
+<view> {{num}} </view>
+
+<view>是否是伪娘: {{isGirl}} </view>
+
+<view>{{person.age}}</view>
+<view>{{person.height}}</view>
+<view>{{person.weight}}</view>
+<view>{{person.name}}</view>
+
+<view data-num="{{num}}"> 自定义属性</view>
+
+<view>
+    <checkbox checked="{{isChecked}}"></checkbox>
+</view>
+
+<view>{{1+1}}</view>
+<view>{{'1'+'1'}}</view>
+<view>{{11%2===0?"偶数":'奇数'}}</view>
+
+
+<view>
+    <!-- <view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id">
+        索引： {{index}} --
+        值：{{item.name}}
+    </view> -->
+    <view>
+        <view>对象循环</view>
+        <block wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="*this" class="my_list">
+            属性：{{key}}
+            --
+            值：{{value}}
+        </block>
+    </view>
+    <view wx:if="{{false}}">
+    1
+    </view>
+    <view wx:elif="{{false}}">
+    2
+    </view>
+    <view wx:else="true">
+    3
+    </view>
+
+    <view hidden="{{true}}">1111</view>
+</view>

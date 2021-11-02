@@ -1,0 +1,6 @@
+<input bindinput="handelInput" type="text" />
+<button bindtap="handelTap" data-operation="{{1}}">+1</button>
+<button bindtap="handelTap" data-operation="{{-1}}">-1</button>
+<view>
+{{num}}
+</view>

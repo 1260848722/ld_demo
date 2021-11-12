@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        添加人员： <input type="text" v-model='input'>
+        <button @click='add'>添加</button>
+        {{nameItem}}
+        <div>
+            <button @click='random'>随机分组 </button>
+        </div>
+        a:{{a}},
+        b:{{b}}
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                input: '',
+                nameItem: [],
+                a: [],
+                b: [],
+            },
+            methods: {
+                add() {
+                    this.nameItem.push(this.input)
+                },
+                random() {
+                    // console.log(this.nameItem.length) //
+                    // console.log(this.nameItem[Math.floor(Math.random() * (this.nameItem.length))])
+                    //获取数组中的随机下标
+                    let index = Math.floor(Math.random() * (this.nameItem.length))
+                    // 随机获取人名
+                    let name = this.nameItem[index]
+                    // 将获取的人名从数组中删除
+                    this.nameItem.splice(index, 1)
+                    // 将人名添加到A组或B组
+                    if (this.a.length < 2) {
+                        this.a.push(name)
+                    } else {
+                        this.b.push(name)
+                    }
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

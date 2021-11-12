@@ -26,6 +26,14 @@ Page({
             }
         ]
     },
+    headleItemChange(e) {
+        const { index } = e.detail
+        let { tabs } = this.data
+        tabs.forEach((v, i) => i === index ? v.isActive = true : v.isActive = false)
+        this.setData({
+            tabs
+        })
+    },
 
     /**
      * 生命周期函数--监听页面加载

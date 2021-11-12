@@ -23,11 +23,9 @@ Component({
     methods: {
         handelItemTap(e) {
             const { index } = e.currentTarget.dataset
-            let { tabs } = this.data
-            tabs.forEach((v, i) => i === index ? v.isActive = true : v.isActive = false)
-            this.setData({
-                tabs
-            })
+            // this.triggerEvent('父组件中自定义事件名称',{要传递的参数})
+            this.triggerEvent('itemChange',{index})
+    
         }
     }
 })
